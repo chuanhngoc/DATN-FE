@@ -6,11 +6,12 @@ import About from './pages/About';
 import AdminDashboard from './pages/AdminDashboard';
 import PrivateRoute from './components/PrivateRoute';
 import Login from './pages/Login';
+import Products from './pages/admin/Products';
+import Categories from './pages/admin/Categories';
+import AddCategory from './pages/admin/categories/AddCategory';
+import EditCategory from './pages/admin/categories/EditCategory';
 
-/**
- * Cấu hình router cho ứng dụng
- * Sử dụng createBrowserRouter để tạo router với các route được bảo vệ
- */
+
 const router = createBrowserRouter([
   {
     // Route cho phần client (public)
@@ -48,9 +49,27 @@ const router = createBrowserRouter([
             // Trang dashboard của admin
             index: true,
             element: <AdminDashboard />
+          },
+          {
+            // Trang dashboard của admin
+            path: 'products',
+            element: <Products />
+          },
+          {
+            path: "categories",
+            element: <Categories />
+          },
+          {
+            path: 'categories/add',
+            element: <AddCategory />
+          },
+          {
+            path: 'categories/:id/edit',
+            element: <EditCategory />
           }
         ]
-      }
+      },
+
     ]
   }
 ]);

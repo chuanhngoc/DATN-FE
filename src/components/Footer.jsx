@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
 
-/**
- * Component Footer - Footer của website bán giày
- * @returns {JSX.Element} - Giao diện footer với thông tin liên hệ và các liên kết
- */
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
