@@ -7,7 +7,8 @@ const PrivateRoute = () => {
   const isAuthenticated = localStorage.getItem('token');
 
   // Nếu đã đăng nhập thì render children (Outlet), ngược lại chuyển hướng về trang login
-  return isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />;
+  // return isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />;
+  return <Outlet/>
 };
 
 export default PrivateRoute; 
